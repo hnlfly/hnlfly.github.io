@@ -268,18 +268,18 @@ function toTitleCase(str) {
 
 setInterval(function() {
     var location = calculatePolar(player.position.clone());
-    $.getJSON(`http://ws.geonames.org/countryCodeJSON?lat=${location.x}&lng=${location.y}&username=demo`, function(data) {
+    $.getJSON(`https://ws.geonames.org/countryCodeJSON?lat=${location.x}&lng=${location.y}&username=viltaria`, function(data) {
         if (!data.countryName) {
             $('#cuck').hide()
             return;
         }
-        $('#imgFlag').attr('src', `http://www.geognos.com/api/en/countries/flag/${data.countryCode}.png`)
+        $('#imgFlag').attr('src', `https://www.geognos.com/api/en/countries/flag/${data.countryCode}.png`)
         $('#countryName').text(data.countryName);
         $('#cuck').show();
     });
     getWeather(location.x, location.y, function(data) {
         $('#weatherDesc').text(toTitleCase(data.weather[0].description));
-        $('#weatherIcon').attr('src', `http://openweathermap.org/img/w/${data.weather[0].icon}.png`)
+        $('#weatherIcon').attr('src', `https://openweathermap.org/img/w/${data.weather[0].icon}.png`)
         if(data.weather[0].id == 800) {
             //console.log("WEATHER IS GOOD");
             player.sun.visible = true;
