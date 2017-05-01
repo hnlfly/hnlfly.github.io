@@ -1,0 +1,76 @@
+/*body {
+  width: 99%;
+  height: 100%;
+}*/
+
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+
+.destination {
+    position:fixed;
+    top: 70%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+    /*color: white;
+    background: red;
+    border-radius: 100px;
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;*/
+}
+#title {
+  position:fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.testButton {
+  position:fixed;
+  top: 70%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.backButton {
+  position:fixed;
+  top: 95%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+.cuck {
+  position: fixed !important;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
+
+.pac-container, .pac-item {
+    width: inherit !important;
+}
+.pac-icon {
+  display: none !important;
+  height: 0px;
+}
+img {
+    display: none;
+}
+
+
+img[src] {
+   display: block;
+ }
